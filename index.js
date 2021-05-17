@@ -21,7 +21,7 @@ app.get("/pdf", async (req, response) => {
   const mb = req.query.mb;
   const ml = req.query.ml;
   const mr = req.query.mr;
-  let fullFileName = "pdf" + "-" + url + ".pdf";
+  let fullFileName = "pdf" + "-" + n + ".pdf";
   try {
     const browser = await puppeteer.launch({
       headless: true,
