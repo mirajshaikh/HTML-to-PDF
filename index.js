@@ -12,8 +12,8 @@ async function timeout(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 app.get("/pdf", async (req, response) => {
-  let d = Math.random() * 10;
-  let n = Math.floor(d);
+ let d = new Date();
+  let n = d.getTime();
   let url = req.query.url;
   const landscape = req.query.landscape;
   const size = req.query.size;
